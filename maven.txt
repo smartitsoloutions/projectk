@@ -1,0 +1,98 @@
+build automation tool
+
+Maven
+
+What is Maven ?
+
+The developers call it a build automation tool but 
+it is much more than that it is a project management tool. 
+Building a project means
+compiling the source code running the tests which could be unit tests as well
+as integration tests packaging the compiled code into jar files bundling
+these jar files into a web archive or a war file deploying these wars on 
+to the servers and several other tasks all these tasks can be automated using tools
+such as maven and etc
+
+SoftWre Project:
+Source Code-----Compile-------Test(Unit Test)------Pakkage-------Jar/war file---Deploy on a Server
+
+Maven is an open-source build automation and project management tool 
+widely used for Java applications.it is developed by apache.Now a days 
+without support build tool we cant create a softwre project
+
+Now a days without support build tool we cant create a softwre project
+
+Maven, Gradle, and ANT -----Build tools
+What is Build and Build process ?
+
+Your requirement is you want create java application then you want to deploy
+java application on server
+
+you want to create a project structure in IDE and required directories
+Your will create java coad ....
+The code is compiled by IDE
+you need to create a jar/war file for the project
+Now you can able to deploy the project on a server
+
+
+It manages dependincs it is based on POM (Project Object Model), this fiel 
+in xml formate. it is used mainly in java based projects
+
+Developers----> code convert into jar, war, ear
+
+jar java based application-----> server deploy
+war Web application ------> web application run
+ear enterprice application (combination of jar and war)
+
+What is WAR file in java ?
+
+a WAR file (Web Application Resource or Web application ARchive) 
+is a file used to distribute a collection of JAR-files, JavaServer 
+Pages, Java Servlets, Java classes, XML files, tag libraries, static 
+web pages (HTML and related files) and other resources that together 
+constitute a web ...
+
+what is pom.xml
+
+What is a POM? A Project Object Model or POM is the fundamental unit 
+of work in Maven. It is an XML file that contains information about 
+the project and configuration details used by Maven to build the project.
+
+
+Types of build tools
+Maven
+Gradle
+ANT
+
+Maven Node Installation:
+
+Note: if you want Maven server, before you will install java in your server
+Note: Jenkins and Maven both haveing use same jave version
+
+--->Launch a EC2 instance (Amozon LInux) 
+
+--->Java Installation
+  
+sudo amazon-linux-extras install java-openjdk11
+Note: download and install maven tool in opt/ directroy then download maven reposatories and plugins using bellow commands
+ https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.zip
+To set the environmet variable for maven
+go to /etc/profile.d then create a file with maven.sh then type
+export M2_HOME=/opt/apache-maven
+export PATH=${M2_HOME}/bin:${PATH} now save the file.
+Now change file permission
+chmod 777 maven.sh
+Now reload the service
+source /etc/profile.d/maven.sh
+then check it using mvn --version
+
+
+Manual build commands:
+
+mvn archetype:generate
+mvn compile
+mvn test
+mvn package 
+mvn install 
+
+
