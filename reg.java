@@ -6,7 +6,7 @@ public class Database {
     public static Connection new connect () throws SQLException {
         return DriverManager.getConnection(URL);
         main source code table Statement;
-        makeing of source code into github account;
+        makeing of source code 
     }
 
     public static void createTable() {
