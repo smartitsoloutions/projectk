@@ -3,8 +3,9 @@ import java.sql.*;
 public class Database {
     private static final String URL = "jdbc:sqlite:database.db";
 
-    public static Connection connect() throws SQLException {
+    public static Connection new connect () throws SQLException {
         return DriverManager.getConnection(URL);
+        main source code table Statement'
     }
 
     public static void createTable() {
